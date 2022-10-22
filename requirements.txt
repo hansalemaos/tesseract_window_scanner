@@ -1,0 +1,6 @@
+a_pandas_ex_tesseract_multirow_regex_fuzz
+keyboard
+numpy
+opencv_python
+pandas
+windows_adb_screen_capture
