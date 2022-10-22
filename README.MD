@@ -4,17 +4,19 @@
 
 [Video ](https://github.com/hansalemaos/screenshots/blob/main/tesseractscreen.mp4?raw=true)
 
+```python
+
+```
+
 ### Example 1 (screenshots from BlueStacks using ADB)
 
 ```python
-import keyboard
 import cv2
 import pandas as pd
 import numpy as np
 from time import sleep
-from windows_adb_screen_capture import ScreenShots
 from tesseract_window_scanner import pd_add_tesseract, sub_color_in_image, \
-    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf
+    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf,keyboard,ScreenShots
 
 
 def activate_stop():
@@ -59,20 +61,18 @@ while not stop:
 ### Example 2 (screenshots from BlueStacks using hwnd)
 
 ```python
-import keyboard
 import cv2
 import pandas as pd
 import numpy as np
 from time import sleep
-from windows_adb_screen_capture import ScreenShots
 from tesseract_window_scanner import pd_add_tesseract, sub_color_in_image, \
-    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf
-    
+    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf,keyboard,ScreenShots
+
 def activate_stop():
     global stop
     stop = True
-    
-        
+
+
 tesseractpath = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 languages = "de+pt+deu"
 pd_add_tesseract(tesseractpath)
@@ -104,20 +104,18 @@ while not stop:
 ### Example 3 (screenshots from BlueStacks using hwnd without showing the results)
 
 ```python
-import keyboard
 import cv2
 import pandas as pd
 import numpy as np
 from time import sleep
-from windows_adb_screen_capture import ScreenShots
 from tesseract_window_scanner import pd_add_tesseract, sub_color_in_image, \
-    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf
+    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf,keyboard,ScreenShots
 
 
 def activate_stop():
     global stop
     stop = True    
-    
+
 tesseractpath = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 languages = "de+pt+deu"
 pd_add_tesseract(tesseractpath)
@@ -130,7 +128,7 @@ keyboard.add_hotkey(quit_key, activate_stop)
 
 while not stop:
     screenshot_window = sc2.imget_hwnd()
-    #optional filter
+
     screenshot_window = sub_color_in_image(
         img=screenshot_window,
         conditions=(("r", ">", 200), "|", ("g", ">", 200), "|", ("b", ">", 200)),
