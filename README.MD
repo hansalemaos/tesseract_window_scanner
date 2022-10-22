@@ -5,7 +5,7 @@
 [Video ](https://github.com/hansalemaos/screenshots/blob/main/tesseractscreen.mp4?raw=true)
 
 ```python
-
+pip install tesseract-window-scanner
 ```
 
 ### Example 1 (screenshots from BlueStacks using ADB)
