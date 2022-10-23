@@ -2,7 +2,7 @@
 
 <img src="https://github.com/hansalemaos/screenshots/raw/main/tesseractscreen.png"/>
 
-[Video ](https://github.com/hansalemaos/screenshots/blob/main/tesseractscreen.mp4?raw=true)
+[Video ](https://www.youtube.com/watch?v=TwSCOc2dFtY)
 
 ```python
 pip install tesseract-window-scanner
