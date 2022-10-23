@@ -25,7 +25,7 @@ def activate_stop():
 
 tesseractpath = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 pd_add_tesseract(tesseractpath)
-languages = "de+pt+deu"
+languages = "en+pt+deu"
 
 sc2 = ScreenShots(
     hwnd=None, adb_path=r"C:\ProgramData\adb\adb.exe", adb_serial="localhost:5735"
