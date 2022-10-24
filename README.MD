@@ -2,7 +2,14 @@
 
 <img src="https://github.com/hansalemaos/screenshots/raw/main/tesseractscreen.png"/>
 
-[Video ](https://www.youtube.com/watch?v=TwSCOc2dFtY)
+Example - **Bluestacks**
+
+<div align="left">
+      <a href="https://www.youtube.com/watch?v=TwSCOc2dFtY">
+         <img src="https://img.youtube.com/vi/TwSCOc2dFtY/0.jpg" style="width:100%;">
+      </a>
+</div>
+
 
 ```python
 pip install tesseract-window-scanner
