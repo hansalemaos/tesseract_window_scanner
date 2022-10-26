@@ -216,6 +216,8 @@ def get_tesseractdf(
             dft = dft.loc[dft.text.str.strip() != ""]
         if conf_thresh is not None:
             dft = dft.loc[dft["conf"] > conf_thresh]
+        dft["end_x"] = dft.left + dft.width
+        dft["end_y"] = dft.top + dft.height
         return dft.reset_index(drop=True)
     except Exception as fe:
         return pd.DataFrame(
@@ -234,19 +236,19 @@ def get_tesseractdf(
                 "text",
                 "middle_x",
                 "middle_y",
+                "end_x",
+                "end_y"
             ]
         )
 
 
 r"""
-import keyboard
 import cv2
 import pandas as pd
 import numpy as np
 from time import sleep
-from windows_adb_screen_capture import ScreenShots
 from tesseract_window_scanner import pd_add_tesseract, sub_color_in_image, \
-    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf
+    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf,keyboard,ScreenShots
 
 
 def activate_stop():
@@ -290,15 +292,12 @@ while not stop:
 
 
 r"""
-# example Bluestacks hwnd
-import keyboard
 import cv2
 import pandas as pd
 import numpy as np
 from time import sleep
-from windows_adb_screen_capture import ScreenShots
 from tesseract_window_scanner import pd_add_tesseract, sub_color_in_image, \
-    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf
+    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf,keyboard,ScreenShots
     
 def activate_stop():
     global stop
@@ -337,14 +336,12 @@ while not stop:
 r"""
 # example Bluestacks hwnd no window
 
-import keyboard
 import cv2
 import pandas as pd
 import numpy as np
 from time import sleep
-from windows_adb_screen_capture import ScreenShots
 from tesseract_window_scanner import pd_add_tesseract, sub_color_in_image, \
-    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf
+    substitute_colors_with_equal_rgb_values, draw_tesseract_results, get_tesseractdf,keyboard,ScreenShots
 
 
 def activate_stop():
